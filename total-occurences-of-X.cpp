@@ -40,6 +40,8 @@ int last(vector<int> arr, int n, int x)
 int total_occ(vector<int> arr, int n, int x)
 {
     int a = first(arr, n, x);
+    if (a == -1)
+        return -1;
     int b = last(arr, n, x);
     return (b - a + 1);
 }
